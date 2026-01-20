@@ -68,11 +68,23 @@ function EventForm({ eventData, handleInputChange, handleSubmit }) {
                     </label>
                 </div>
 
-                {/* --- City for Weather Data --- */}
                 <div className="form-group">
                     <input
                         type="text"
-                        name="location" // This remains 'location' for weather data
+                        name="address"
+                        placeholder=" "
+                        value={eventData.address || ""}
+                        onChange={handleInputChange}
+                    />
+                    <label>
+                        <FiMapPin style={{ marginRight: "8px" }} />
+                        Street Address
+                    </label>
+                </div>
+                <div className="form-group">
+                    <input
+                        type="text"
+                        name="location"
                         placeholder=" "
                         value={eventData.location || ""}
                         onChange={handleInputChange}
@@ -80,26 +92,10 @@ function EventForm({ eventData, handleInputChange, handleSubmit }) {
                     />
                     <label>
                         <FiMapPin style={{ marginRight: "8px" }} />
-                        City (for Weather Data)
+                        City
                     </label>
                 </div>
 
-                {/* --- NEW: Full Address Field --- */}
-                <div className="form-group">
-                    <input
-                        type="text"
-                        name="address" // This is the new 'address' field
-                        placeholder=" "
-                        value={eventData.address || ""} // Ensure it's never undefined
-                        onChange={handleInputChange}
-                    />
-                    <label>
-                        <FiMapPin style={{ marginRight: "8px" }} />
-                        Full Address (Optional)
-                    </label>
-                </div>
-
-                {/* Updated Category Dropdown */}
                 <div className="form-group">
                     <select
                         name="category"
@@ -115,7 +111,7 @@ function EventForm({ eventData, handleInputChange, handleSubmit }) {
                             border: "1px solid #ccc",
                             boxSizing: "border-box",
                             backgroundColor: "#fff",
-                            color: eventData.category ? "#000" : "#888", // make placeholder appear grayed out
+                            color: eventData.category ? "#000" : "#888",
                         }}
                     >
                         <option value="" disabled>

@@ -77,10 +77,8 @@ const SingleEvent = ({ user }) => {
         year: "numeric",
     });
 
-    // Determine the location string for the map
-    // Prefer full address if available, otherwise use city (event.location)
     const mapLocation = event.address ? event.address : event.location;
-    // URL-encode the location string for the Google Maps iframe
+
     const encodedMapLocation = encodeURIComponent(mapLocation);
 
     return (
@@ -97,7 +95,6 @@ const SingleEvent = ({ user }) => {
                 )}
 
                 <div className="event-canvas">
-                    {/* Display both city and full address if available */}
                     <p>
                         📍 **City:** {event.location}
                         {event.address && (
@@ -142,21 +139,18 @@ const SingleEvent = ({ user }) => {
             </section>
 
             <aside className="sidebar">
-                {/* Use the full address for the map if available */}
-                {mapLocation && ( // Only render map if there's a location to map
+                {mapLocation && (
                     <iframe
                         title="map"
                         width="100%"
                         height="250"
                         loading="lazy"
                         allowFullScreen
-                        // Corrected Google Maps embed URL
                         src={`https://maps.google.com/maps?q=${encodedMapLocation}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
                         style={{ borderRadius: "8px" }}
                     ></iframe>
                 )}
 
-                {/* Show buttons only if user is logged in */}
                 {user && (
                     <div className="event-actions">
                         <button className="edit-button" onClick={handleEdit}>

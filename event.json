@@ -187,19 +187,38 @@
         }
     },
     {
+        "title": "asfd",
+        "date": "2025-06-26",
+        "time": "11:57",
+        "location": "Jyv\u00e4skyl\u00e4",
+        "category": "Religious & Spiritual",
+        "description": "aefbgnfdh",
+        "image_url": null,
+        "id": 12,
+        "weather": {
+            "temp": 13.19,
+            "description": "clear sky",
+            "icon": "01d",
+            "coord": {
+                "lat": 62.2415,
+                "lon": 25.7209
+            }
+        }
+    },
+    {
         "title": "Project Presentation",
         "date": "2025-06-13",
         "time": "12:00",
         "location": "Helsinki",
         "category": "Educational",
-        "description": "Good times, we are presenting our amazing Event Planner App, \nsuch fun to make this happen, can't wait to go for holiday",
+        "description": "Today we present our team projects at school and after we get to go to the holiday, yay",
         "image_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcRY_Vq02DaBetr2tbgOUBcDS4Wx7DKQjpFhDw&s",
         "address": "rautatiel\u00e4isenkatu 5",
-        "id": 14,
+        "id": 13,
         "weather": {
-            "temp": 16.17,
-            "description": "light rain",
-            "icon": "10d",
+            "temp": 16.24,
+            "description": "clear sky",
+            "icon": "01d",
             "coord": {
                 "lat": 60.1695,
                 "lon": 24.9355

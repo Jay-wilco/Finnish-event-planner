@@ -20,14 +20,12 @@ const FormPage = ({ user }) => {
 
     const [isEditing, setIsEditing] = useState(false);
 
-    // 🚫 Redirect to login if not authenticated
     useEffect(() => {
         if (!user) {
             navigate("/login");
         }
     }, [user, navigate]);
 
-    // Fetch event for editing
     useEffect(() => {
         if (id) {
             setIsEditing(true);
@@ -82,7 +80,9 @@ const FormPage = ({ user }) => {
             });
 
             if (res.ok) {
-                alert(`Event ${isEditing ? "updated" : "created"} successfully!`);
+                alert(
+                    `Event ${isEditing ? "updated" : "created"} successfully!`
+                );
                 navigate("/events");
             } else {
                 const errorText = await res.text();
@@ -95,8 +95,7 @@ const FormPage = ({ user }) => {
         }
     };
 
-    if (!user) return null; // Avoid rendering the form until redirect happens
-
+    if (!user) return null;
     return (
         <div className="form-background">
             <h1 className="form-title">

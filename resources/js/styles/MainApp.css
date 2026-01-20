@@ -5,6 +5,17 @@ body {
         "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+img,
+iframe,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
 .app-layout {
     display: flex;
     flex-direction: column;

@@ -13,7 +13,6 @@ const SingleEvent = ({ user }) => {
         const fetchEvent = async () => {
             try {
                 const response = await fetch(`/api/events/${id}`);
-
                 if (response.ok) {
                     const eventData = await response.json();
                     setEvent(eventData);
@@ -96,26 +95,22 @@ const SingleEvent = ({ user }) => {
 
                 <div className="event-canvas">
                     <p>
-                        📍 **City:** {event.location}
-                        {event.address && (
-                            <>
-                                <br />
-                                🗺️ **Address:** {event.address}
-                            </>
-                        )}
+                        📍{" "}
+                        {event.address
+                            ? `${event.address}, ${event.location}`
+                            : event.location}
                     </p>
                     <p>
                         📅 {formattedDate} at {event.time}
                     </p>
-                    <p>🏷️ Category: {event.category}</p>
                 </div>
 
                 <div className="event-canvas">
                     <p>{event.description}</p>
                 </div>
 
-                <p className="weather-heading">Weather Forecast</p>
                 <div className="event-canvas">
+                    <p className="weather-heading">Weather Forecast</p>
                     {event.weather &&
                     event.weather.temp !== null &&
                     isFutureOrRecent(event.date) ? (

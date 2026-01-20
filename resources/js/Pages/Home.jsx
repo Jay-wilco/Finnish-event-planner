@@ -12,7 +12,7 @@ function Home() {
             .then((res) => res.json())
             .then((data) => {
                 const sorted = data.sort(
-                    (a, b) => new Date(a.date) - new Date(b.date)
+                    (a, b) => new Date(b.date) - new Date(a.date)
                 );
                 setEvents(sorted.slice(0, 3));
             });
@@ -44,8 +44,7 @@ function Home() {
             <section className="upcoming-events">
                 <h3>Upcoming Events</h3>
                 <p className="subtext-color2">
-                    You can find the latest upcoming events near you in this
-                    section
+                See the latest events happening in your area.
                 </p>
                 <div className="event-grid">
                     {events.map((event) => (

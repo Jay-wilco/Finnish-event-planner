@@ -1,9 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/EventCard.css";
+import { categoryEmojis } from "../../data/categoryEmojis";
 
 function EventCard({ event, editingId, editingData, handleEditInputChange }) {
     const isEditing = editingId === event.id;
+
+    // Prepare formatted location string
+    const locationDisplay = event.address
+        ? `${event.address}, ${event.location}`
+        : event.location;
+
+    // Shorten description to 100 chars + ellipsis if needed
+    const shortenedDescription =
+        event.description.length > 100
+            ? event.description.slice(0, 100) + "..."
+            : event.description;
 
     return (
         <div className="eventCard">
@@ -45,41 +57,35 @@ function EventCard({ event, editingId, editingData, handleEditInputChange }) {
                 </>
             ) : (
                 <>
-                    <div className="event-header">
+                    <div className="event-header" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                         <h2>{event.title}</h2>
-                    {event.weather ? (
-                        <div className="weather-wrapper">
+                        {event.weather ? (
                             <img
-                                src={`http://openweathermap.org/img/wn/${event.weather.icon}@4x.png`}
+                                src={`http://openweathermap.org/img/wn/${event.weather.icon}@2x.png`}
                                 alt={event.weather.description}
-                                className="weather-icon"
+                                className="weather-icon-small"
                                 tabIndex={0}
                             />
-                            <div className="weather-popup" role="tooltip">
-                                <p className="temp">{event.weather.temp} °C</p>
-                                <p className="desc">
-                                    {event.weather.description}
-                                </p>
-                                <p className="humidity">
-                                    Humidity: {event.weather.humidity}%
-                                </p>
-                                <p className="wind">
-                                    Wind: {event.weather.wind_speed} m/s
-                                </p>
-                            </div>
-                        </div>
-                    ) : (
-                        <p className="no-weather">No weather data available</p>
-                    )}
+                        ) : (
+                            <p className="no-weather">🌫️</p>
+                        )}
                     </div>
 
-                    <p>
-                        <strong>📅 Date:</strong> {event.date}
+                    <div className="category-wrapper">
+    {categoryEmojis[event.category]?.map((emoji, index) => (
+        <span key={index} className="category-tag">
+            {emoji}
+        </span>
+    ))}
+</div>
+                    <p className="date-time-location" style={{ whiteSpace: "pre-line" }}>
+                        📅 {event.date} <br />
+                        🕒 {event.time} <br />
+                        📍 {locationDisplay}
                     </p>
-                    <p>
-                        <strong>📍 Location:</strong> {event.location}
-                    </p>
-                    <p>{event.description}</p>
+
+                    <p className="description-text">{shortenedDescription}</p>
+
                     {event.image_url && (
                         <img
                             src={event.image_url}
@@ -87,6 +93,7 @@ function EventCard({ event, editingId, editingData, handleEditInputChange }) {
                             className="event-image"
                         />
                     )}
+
                     <div className="card-buttons">
                         <Link
                             to={`/events/${event.id}`}

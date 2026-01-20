@@ -93,7 +93,7 @@ class EventController extends Controller
             'time' => 'required|string', // <-- Added/Ensured
             'category' => 'required|string', // <-- Added/Ensured
             'location' => 'required|string|max:255', // This is for the City (weather)
-            'address' => 'nullable|string|max:255',   // <-- NEW: Validation for Full Address
+            'address' => 'required|string|max:255',   // <-- NEW: Validation for Full Address
             'description' => 'required|string',
             'image_url' => 'nullable|url',
         ]);

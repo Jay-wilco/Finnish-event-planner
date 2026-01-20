@@ -1,31 +1,9 @@
-/* :root {
-    --bg-color: #ffffff;
-    --text-color: #222222;
-
-    --header-bg: #f5f5f5;
-    --header-text: #002f6c;
-
-    --link-color: #002f6c;
-    --link-hover: #5cadff;
-
-    --button-bg: #002f6c;
-    --button-text: #ffffff;
-    --button-hover-bg: #0053a4;
-
-    --footer-bg: #f5f5f5;
-    --footer-text: #002f6c;
-
-    --heading-color: #111827;
-    --subtext-color: #6b7280;
-
-    --section-bg: #ffffff;
-} */
-
 .filter-wrapper {
     display: flex;
     flex-direction: column;
     padding: 0.2rem;
 }
+
 .eventCard {
     position: relative;
     background-color: var(--section-bg);
@@ -48,19 +26,55 @@
     transform: translateY(-4px);
 }
 
-.eventCard h2 {
+.event-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.event-header h2 {
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--heading-color);
-    margin-bottom: 0.25rem;
-    padding-right: 140px;
+    margin: 0;
     flex: 1;
+}
+
+.weather-icon-small {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: #e5e7eb;
+    color: #111827;
+    font-weight: 400;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
+    width: fit-content;
 }
 
 .eventCard p {
     margin: 0.3rem 0;
     color: var(--subtext-color);
     font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.datetime-location {
+    line-height: 1.6;
+}
+
+.eventCard .description-text {
+    color: var(--heading-color);
 }
 
 .weather-icon {

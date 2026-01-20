@@ -1,13 +1,16 @@
 [
     {
-        "title": "Helsinki Day - Celebrate the Capital's Birthday!",
-        "date": "2025-06-12",
+        "title": "Project Presentation",
+        "date": "2025-06-13",
+        "time": "12:00",
         "location": "Helsinki",
-        "description": "Helsinki comes alive on its birthday! Expect street performances, live music, free museums, food stalls, and family-friendly activities across the city. Whether you're a first-time visitor or a local, the cheerful atmosphere is irresistible. Don't miss the open-air concerts at Senate Square!",
-        "image_url": null,
-        "id": 1,
+        "category": "Educational",
+        "description": "Good times, we are presenting our amazing Event Planner App, \nsuch fun to make this happen, can't wait to go for holiday",
+        "image_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcRY_Vq02DaBetr2tbgOUBcDS4Wx7DKQjpFhDw&s",
+        "address": "Rautatiel\u00e4isenkatu 5",
+        "id": "14",
         "weather": {
-            "temp": 17.21,
+            "temp": 16.17,
             "description": "light rain",
             "icon": "10d",
             "coord": {
@@ -17,118 +20,59 @@
         }
     },
     {
-        "title": "Korso Midsummer Bonfires - A Magical Finnish Tradition",
-        "date": "2025-06-20",
-        "location": "Korso",
-        "description": "Step into a Finnish fairytale with dancing, traditional folk music, and the iconic midsummer bonfire lighting on a beautiful island. Watch couples in national dress perform old folk dances, and enjoy grilled treats under the midnight sun. An unforgettable way to experience Finnish culture.",
-        "image_url": null,
-        "id": 2,
+        "title": "Helsinki After Work Rooftop Meetup",
+        "date": "2025-08-16",
+        "time": "18:00",
+        "location": "Helsinki",
+        "category": "Social",
+        "description": "This casual rooftop gathering invites Helsinki\u2019s professionals and creatives to unwind, mingle, and network in a relaxed atmosphere. Held at Clarion Hotel\u2019s rooftop bar, the event features music, drinks, and panoramic views of the city skyline. Attendees can enjoy light snacks, curated DJ sets, and interactive networking games designed to spark conversation. Whether you\u2019re new in town, expanding your circle, or just looking for a laid-back evening, this is the perfect setting to meet like-minded people and build new connections.",
+        "image_url": "https:\/\/images.unsplash.com\/photo-1527529482837-4698179dc6ce",
+        "address": "Clarion Hotel Helsinki, Rooftop Bar",
+        "id": 15,
         "weather": {
-            "temp": 15.6,
-            "description": "light rain",
-            "icon": "10d",
-            "coord": {
-                "lat": 60.3509,
-                "lon": 25.0756
-            }
-        }
-    },
-    {
-        "title": "World Village Festival",
-        "date": "2025-06-15",
-        "location": "Espoo",
-        "description": "Music, activism, and food from all over the globe-free entry! Join thousands to explore cultures, listen to powerful talks, try global street food, and shop ethical brands.",
-        "image_url": null,
-        "id": 3,
-        "weather": {
-            "temp": 16.36,
-            "description": "few clouds",
-            "icon": "02d",
-            "coord": {
-                "lat": 60.25,
-                "lon": 24.6667
-            }
-        }
-    },
-    {
-        "title": "Pori Jazz Festival",
-        "date": "2025-06-17",
-        "location": "Pori",
-        "description": "Legendary names in jazz, soul, and pop gather in the charming coastal town of Pori. Enjoy big-name acts in a laid-back outdoor setting, surrounded by cafes and the scent of summer air.",
-        "image_url": null,
-        "id": 4,
-        "weather": {
-            "temp": 17.04,
+            "temp": 27.45,
             "description": "clear sky",
             "icon": "01d",
             "coord": {
-                "lat": 61.4833,
-                "lon": 21.7833
+                "lat": 60.1695,
+                "lon": 24.9355
             }
         }
     },
     {
-        "title": "Flow Festival",
-        "date": "2025-06-15",
-        "location": "Vantaa",
-        "description": "Wake up early for a splash-literally! Each year, one \"Sleepyhead\" is tossed into the sea at 7 AM, kicking off a day of festivities, parades, and local markets. It's quirky, charming, and full of small-town joy. Ideal for families and lovers of offbeat traditions.",
-        "image_url": null,
-        "id": 5,
+        "title": "AI & Society: Ethics in the Age of Automation",
+        "date": "2025-07-30",
+        "time": "10:00",
+        "location": "Helsinki",
+        "category": "Educational",
+        "description": "This one-day seminar dives deep into the ethical implications of artificial intelligence in modern society. Academics, policymakers, and industry experts will explore topics like algorithmic bias, surveillance, and the social consequences of AI decision-making. The event includes keynote talks, expert panels, and audience Q&A sessions. Open to students, researchers, and the public, it's a chance to critically engage with the future of technology and its impact on humanity.",
+        "image_url": "https:\/\/images.unsplash.com\/photo-1540575467063-178a50c2df87",
+        "address": "University of Helsinki, Main Building",
+        "id": 16,
         "weather": {
-            "temp": 15.92,
-            "description": "light rain",
-            "icon": "10d",
+            "temp": 27.48,
+            "description": "clear sky",
+            "icon": "01d",
             "coord": {
-                "lat": 60.2941,
-                "lon": 25.041
+                "lat": 60.1695,
+                "lon": 24.9355
             }
         }
     },
     {
-        "title": "World Wife Carrying Championships",
-        "date": "2025-06-24",
-        "location": "Sonkaj\u00e4rvi",
-        "description": "Witness (or join!) the world's most entertaining race: husbands sprinting with their wives on their backs through a muddy obstacle course. The prize? The wife's weight in beer! Fun, bizarre, and unforgettable. This is Finland's humor and heart on full display.",
-        "image_url": null,
-        "id": 6,
-        "weather": {
-            "temp": 15.35,
-            "description": "broken clouds",
-            "icon": "04d",
-            "coord": {
-                "lat": 63.6667,
-                "lon": 27.5167
-            }
-        }
-    },
-    {
-        "title": "Slush - Where the Future Is Born",
-        "date": "2025-06-21",
-        "location": "Espoo",
-        "description": "Tech lovers, entrepreneurs, and investors unite at Europe's coolest startup conference. With electrifying keynotes, next-gen innovations, and legendary networking parties, Slush is the ultimate launchpad for bold ideas.",
-        "image_url": null,
-        "id": 7,
-        "weather": {
-            "temp": 16.58,
-            "description": "broken clouds",
-            "icon": "04d",
-            "coord": {
-                "lat": 60.25,
-                "lon": 24.6667
-            }
-        }
-    },
-    {
-        "title": "Tampere Theatre Festival",
-        "date": "2025-06-25",
+        "title": "Nordic Business Forum 2025",
+        "date": "2025-07-31",
+        "time": "09:30",
         "location": "Tampere",
-        "description": "As the oldest annual theatre festival in the Nordic countries, Tampere Theatre Festival showcases a diverse range of performances, including drama, dance, and street theatre. With hundreds of performances and events, it's a must-visit for theatre enthusiasts.",
-        "image_url": null,
-        "id": 8,
+        "category": "Corporate\/Business",
+        "description": "A premier business conference bringing together global thinkers, entrepreneurs, and executives. This year\u2019s event in Tampere features keynote talks, workshops, and networking zones aimed at leadership, innovation, and strategic growth. Ideal for business professionals seeking to scale or adapt in a rapidly changing world.",
+        "image_url": "https:\/\/plus.unsplash.com\/premium_photo-1664302654457-399bf1bff533",
+        "address": "Tampere Exhibition and Sports Centre",
+        "id": 17,
         "weather": {
-            "temp": 15.92,
-            "description": "clear sky",
-            "icon": "01d",
+            "temp": 27.63,
+            "description": "scattered clouds",
+            "icon": "03d",
             "coord": {
                 "lat": 61.4991,
                 "lon": 23.7871
@@ -136,53 +80,62 @@
         }
     },
     {
-        "title": "Ilosaarirock - Rocking the East",
-        "date": "2025-06-26",
-        "location": "Joensuu",
-        "description": "One of Finland's oldest rock festivals, Ilosaarirock features over 50 artists across multiple stages. From heavy metal to punk rock, the festival offers a diverse lineup in a vibrant setting.",
-        "image_url": null,
-        "id": 9,
+        "title": "Flow Festival 2025",
+        "date": "2025-08-02",
+        "time": "11:30",
+        "location": "Helsinki",
+        "category": "Entertainment",
+        "description": "Flow Festival is a leading cultural festival that combines music, design, and gastronomy. The event features an eclectic lineup from global and Nordic artists, immersive art installations, and top-tier food experiences. Held in an urban industrial area, it attracts a stylish, music-loving crowd from around the world.",
+        "image_url": "https:\/\/images.unsplash.com\/photo-1478147427282-58a87a120781",
+        "address": "Suvilahti",
+        "id": 18,
         "weather": {
-            "temp": 15.27,
+            "temp": 27.49,
             "description": "clear sky",
             "icon": "01d",
             "coord": {
-                "lat": 62.6012,
-                "lon": 29.7632
+                "lat": 60.1695,
+                "lon": 24.9355
             }
         }
     },
     {
-        "title": "Secto Automotive Rally Finland",
-        "date": "2025-06-24",
-        "location": "Jyv\u00e4skyl\u00e4",
-        "description": "Known as the Finnish Rally, this World Rally Championship event offers high-speed action and breathtaking landscapes. It's a must-attend for motorsport enthusiasts and adventure seekers.",
-        "image_url": null,
-        "id": 10,
+        "title": "Oulu City Run",
+        "date": "2025-08-23",
+        "time": "10:45",
+        "location": "Oulu",
+        "category": "Sports & Fitness",
+        "description": "Experience the northern charm of Oulu through this annual running event, offering marathon, half-marathon, and fun run options. The route takes runners through scenic urban parks, waterfront paths, and historic areas. With cheering crowds and a festive atmosphere, it's a healthy way to explore the city.",
+        "image_url": "https:\/\/plus.unsplash.com\/premium_photo-1663051210654-0c8a835dad1f",
+        "address": "City Centre",
+        "id": 19,
         "weather": {
-            "temp": 16.63,
+            "temp": 26.06,
             "description": "clear sky",
             "icon": "01d",
             "coord": {
-                "lat": 62.2415,
-                "lon": 25.7209
+                "lat": 65.0124,
+                "lon": 25.4682
             }
         }
     },
     {
-        "title": "M\u00e4ntt\u00e4 Art Festival",
-        "date": "2025-06-28",
-        "location": "M\u00e4ntt\u00e4",
-        "description": "As Finland's largest summer exhibition of contemporary art, the M\u00e4ntt\u00e4 Art Festival features works from 25 artists or groups, set against the backdrop of a charming small town. It's a haven for art lovers seeking inspiration.",
-        "image_url": null,
-        "id": 11,
+        "title": "Wellness Weekend Kuopio",
+        "date": "2025-08-10",
+        "time": "13:00",
+        "location": "Kuopio",
+        "category": "Lifestyle & Hobby",
+        "description": "Explore yoga classes, mental wellness talks, plant-based cooking demos, and a sustainable living fair under one roof. A calming and enriching weekend of self-care and learning.",
+        "image_url": "https:\/\/plus.unsplash.com\/premium_photo-1725983645492-38c3dec15c6f",
+        "address": "Opistotie 4, 70200",
+        "id": 20,
         "weather": {
-            "temp": 15.23,
-            "description": "overcast clouds",
-            "icon": "04d",
+            "temp": 30.68,
+            "description": "clear sky",
+            "icon": "01d",
             "coord": {
-                "lat": 62.0301,
-                "lon": 24.6279
+                "lat": 62.8924,
+                "lon": 27.677
             }
         }
     },
@@ -206,15 +159,20 @@
         }
     },
     {
-        "title": "Project Presentation",
-        "date": "2025-06-13",
-        "time": "12:00",
+        "title": "Slush 2025",
+        "date": "2025-08-15",
+        "time": "10:00",
         "location": "Helsinki",
         "category": "Educational",
         "description": "Today we present our team projects at school and after we get to go to the holiday, yay",
         "image_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcRY_Vq02DaBetr2tbgOUBcDS4Wx7DKQjpFhDw&s",
         "address": "rautatiel\u00e4isenkatu 5",
         "id": 13,
+        "category": "Tech",
+        "description": "Europe\u2019s top startup and tech event featuring founders, VCs, and innovators. Includes keynote speeches, pitch competitions, demos, and side events throughout the city.",
+        "image_url": "https:\/\/plus.unsplash.com\/premium_photo-1661486750841-c02a9d22a1a6",
+        "address": "Messuaukio 1, 00520",
+        "id": 21,
         "weather": {
             "temp": 16.24,
             "description": "clear sky",
@@ -222,6 +180,26 @@
             "coord": {
                 "lat": 60.1695,
                 "lon": 24.9355
+            }
+        }
+    },
+    {
+        "title": "Rovaniemi Indigenous Film Festival",
+        "date": "2025-09-29",
+        "time": "08:00",
+        "location": "Rovaniemi",
+        "category": "Community & Charity",
+        "description": "Celebrate indigenous cultures through film, discussion, and performance in Lapland's capital. Hosted at the iconic Arktikum, this festival highlights S\u00e1mi and global indigenous voices.",
+        "image_url": "https:\/\/images.unsplash.com\/photo-1541445976433-f466f228a409",
+        "address": "Pohjoisranta 4, 96200",
+        "id": 22,
+        "weather": {
+            "temp": 26.67,
+            "description": "scattered clouds",
+            "icon": "03d",
+            "coord": {
+                "lat": 66.5,
+                "lon": 25.7167
             }
         }
     }

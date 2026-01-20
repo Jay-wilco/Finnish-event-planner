@@ -1,10 +1,19 @@
+body {
+    overflow-x: hidden;
+}
+
+img,
+iframe,
+video {
+    max-width: 100%;
+    height: auto;
+}
 
 .app-container {
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 50vh;
 }
-
 
 .event-form {
     margin-bottom: 30px;
@@ -27,7 +36,6 @@
     font-size: 14px;
 }
 
-
 .filter-sort {
     margin-bottom: 20px;
 }
@@ -45,7 +53,6 @@
     max-width: 50px;
 }
 
-
 .map-wrapper {
     position: fixed;
     left: 0;
@@ -54,7 +61,6 @@
     height: 50vh;
     z-index: 1000;
 }
-
 
 .map-info {
     position: absolute;
@@ -71,7 +77,6 @@
 .map-info img {
     width: 40px;
 }
-
 
 .event-list {
     display: flex;
@@ -133,7 +138,6 @@
 .card-buttons button:hover {
     background-color: #0056b3;
 }
-
 
 .event-card:hover {
     transform: translateY(-3px);

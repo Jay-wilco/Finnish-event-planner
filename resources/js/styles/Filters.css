@@ -1,11 +1,88 @@
-.filter-sort {
+.filter-bar {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.filter-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.filter-controls {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
 }
-label {
-    padding: 0rem 1rem;
+
+.filter-label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #555;
+    min-width: 160px;
+    text-align: left;
 }
-input,
-select {
-    margin: 0 5px;
+
+.filter-input,
+.filter-select,
+.filter-date {
+    margin-top: 6px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+    outline-offset: 2px;
+    outline-color: transparent;
+    transition: outline-color 0.2s ease;
+}
+
+.filter-input:focus,
+.filter-select:focus,
+.filter-date:focus {
+    outline-color: #4a90e2;
+}
+
+@media (max-width: 768px) {
+    .filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-label {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+html.dark .filter-title {
+    color: var(--text-color);
+}
+
+html.dark .filter-bar {
+    color: var(--text-color);
+}
+
+html.dark .filter-label {
+    color: var(--text-color);
+}
+
+html.dark .filter-input,
+html.dark .filter-select,
+html.dark .filter-date {
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    border-color: #555;
+}
+
+html.dark .filter-input::placeholder {
+    color: #aaa;
 }

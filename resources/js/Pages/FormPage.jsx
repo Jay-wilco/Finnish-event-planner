@@ -46,7 +46,7 @@ const FormPage = ({ user }) => {
 
     const fetchEventForEdit = async (eventId) => {
         try {
-            const res = await fetch(`${backendUrl}/api/events/${eventId}`);
+            const res = await fetch(`/api/events/${eventId}`);
             if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
             const data = await res.json();
             setEventData(data);
@@ -66,9 +66,7 @@ const FormPage = ({ user }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const url = isEditing
-            ? `${backendUrl}/api/events/${id}`
-            : `${backendUrl}/api/events`;
+        const url = isEditing ? `/api/events/${id}` : `/api/events`;
         const method = isEditing ? "PUT" : "POST";
 
         try {

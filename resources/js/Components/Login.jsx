@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Login.css";
-import { FaLock, FaEnvelope} from 'react-icons/fa';
+import { FaLock, FaEnvelope } from "react-icons/fa";
 
 function Login({ onLogin, user, onLogout }) {
     const [formData, setFormData] = useState({ email: "", password: "" });
@@ -19,7 +19,7 @@ function Login({ onLogin, user, onLogout }) {
         setMessage("");
 
         try {
-            const res = await fetch("http://localhost:8000/login", {
+            const res = await fetch("/login", {
                 method: "POST",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
@@ -92,7 +92,9 @@ function Login({ onLogin, user, onLogout }) {
                     required
                 />
             </div>
-            <button type="submit" className="login-button">Login</button>
+            <button type="submit" className="login-button">
+                Login
+            </button>
             {message && (
                 <p
                     className={`login-message ${

@@ -17,18 +17,17 @@ function MainApp() {
     const [loadingUser, setLoadingUser] = useState(true);
     const navigate = useNavigate();
 
-    const backendUrl =
-        import.meta.env.VITE_APP_BACKEND_URL || "http://localhost:8000";
+    // const backendUrl = import.meta.env.VITE_APP_BACKEND_URL || "";
 
     // --- User authentication check on mount/refresh ---
     useEffect(() => {
         const checkUser = async () => {
             try {
-                await fetch(`${backendUrl}/sanctum/csrf-cookie`, {
+                await fetch(`/sanctum/csrf-cookie`, {
                     credentials: "include",
                 });
 
-                const response = await fetch(`${backendUrl}/api/user`, {
+                const response = await fetch(`/api/user`, {
                     method: "GET",
                     headers: {
                         Accept: "application/json",
@@ -74,7 +73,7 @@ function MainApp() {
 
     const handleLogout = async () => {
         try {
-            await fetch(`${backendUrl}/logout`, {
+            await fetch(`/logout`, {
                 method: "POST",
                 credentials: "include",
             });

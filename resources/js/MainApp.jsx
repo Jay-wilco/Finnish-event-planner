@@ -61,8 +61,14 @@ function MainApp() {
     }, []);
 
     // --- CORRECTED handleLoginSuccess and handleRegisterSuccess ---
-    const handleLoginSuccess = (userData) => {
-        setUser(userData.user); // <-- Reverted to userData.user as per your original working code
+    // const handleLoginSuccess = (userData) => {
+    //     setUser(userData.user); // <-- Reverted to userData.user as per your original working code
+    //     navigate("/");
+    // };
+
+    const handleLoginSuccess = (data) => {
+        const u = data?.user ?? data;
+        setUser(u);
         navigate("/");
     };
 

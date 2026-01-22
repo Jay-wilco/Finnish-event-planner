@@ -47,7 +47,7 @@ const Header = ({ user, onLogout }) => {
                         </NavLink>
                     ) : (
                         <NavLink to="/login" className="nav-link">
-                            Sign in to add event
+                            Add Event
                         </NavLink>
                     )}
                 </div>

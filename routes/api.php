@@ -2,24 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
-use Illuminate\Http\Request; // <-- Add this line if not already present
+use Illuminate\Http\Request;
 
-// Public routes (no authentication required)
+// Public event routes (portfolio demo)
 Route::get('/events', [EventController::class, 'index']);
 Route::get('/events/{id}', [EventController::class, 'show']);
+Route::post('/events', [EventController::class, 'store']);
+Route::put('/events/{id}', [EventController::class, 'update']);
+Route::delete('/events/{id}', [EventController::class, 'destroy']);
+
 Route::get('/test', function () {
     return response()->json(['message' => 'API is working']);
 });
 
-// Protected routes (require Sanctum authentication)
+// Keep user protected (optional)
 Route::middleware('auth:sanctum')->group(function () {
-    // --- ADD THIS LINE FOR THE USER ENDPOINT ---
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
-    // --- END ADDITION ---
-
-    Route::post('/events', [EventController::class, 'store']);
-    Route::put('/events/{id}', [EventController::class, 'update']);
-    Route::delete('/events/{id}', [EventController::class, 'destroy']);
 });

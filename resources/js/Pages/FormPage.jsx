@@ -72,9 +72,12 @@ const FormPage = ({ user }) => {
         try {
             const res = await fetch(url, {
                 method,
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(eventData),
                 credentials: "include",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(eventData),
             });
 
             if (res.ok) {

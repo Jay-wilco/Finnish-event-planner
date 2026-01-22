@@ -13,7 +13,7 @@ class EventController extends Controller
 
     public function __construct()
     {
-        $this->jsonFile = base_path('event.json');
+        $this->jsonFile = storage_path('app/events.json');
     }
 
     // List all events
@@ -48,7 +48,7 @@ class EventController extends Controller
             'time' => 'required|string', // <-- Added/Ensured
             'category' => 'required|string', // <-- Added/Ensured
             'location' => 'required|string|max:255', // This is for the City (weather)
-            'address' => 'nullable|string|max:255',   // <-- NEW: Validation for Full Address
+            'address' => 'required|string|max:255',   // <-- NEW: Validation for Full Address
             'description' => 'required|string',
             'image_url' => 'nullable|url',
         ]);
@@ -168,6 +168,11 @@ class EventController extends Controller
 
     protected function readEvents()
     {
+        $dir = dirname($this->jsonFile);
+        if (!is_dir($dir)) {
+            mkdir($dir, 0755, true);
+        }
+
         if (!file_exists($this->jsonFile)) {
             file_put_contents($this->jsonFile, json_encode([]));
         }
@@ -176,10 +181,17 @@ class EventController extends Controller
         return json_decode($json, true) ?? [];
     }
 
+
     protected function writeEvents(array $events)
     {
-        file_put_contents($this->jsonFile, json_encode($events, JSON_PRETTY_PRINT));
+        $result = file_put_contents($this->jsonFile, json_encode($events, JSON_PRETTY_PRINT));
+
+        if ($result === false) {
+            Log::error('Failed to write events JSON file', ['path' => $this->jsonFile]);
+            abort(response()->json(['message' => 'Server cannot persist events storage'], 500));
+        }
     }
+
 
     // Generate unique ID
     protected function generateId(array $events)

@@ -177,18 +177,19 @@ class EventController extends Controller
             file_put_contents($this->jsonFile, json_encode([]));
         }
 
-        $json = file_get_contents($this->jsonFile);
-        return json_decode($json, true) ?? [];
+        return json_decode(file_get_contents($this->jsonFile), true) ?? [];
     }
-
 
     protected function writeEvents(array $events)
     {
-        $result = file_put_contents($this->jsonFile, json_encode($events, JSON_PRETTY_PRINT));
+        $ok = file_put_contents(
+            $this->jsonFile,
+            json_encode($events, JSON_PRETTY_PRINT)
+        );
 
-        if ($result === false) {
-            Log::error('Failed to write events JSON file', ['path' => $this->jsonFile]);
-            abort(response()->json(['message' => 'Server cannot persist events storage'], 500));
+        if ($ok === false) {
+            Log::error('Failed to write events JSON', ['path' => $this->jsonFile]);
+            abort(500, 'Failed to persist events');
         }
     }
 
